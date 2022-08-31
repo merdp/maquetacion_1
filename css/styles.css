@@ -9,6 +9,26 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face{
+    font-family: "fajala";
+    src: url("../css/fonts/FjallaOne-Regular.ttf") format('truetype');   
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "icons";
+    src: url("../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg"),
+        url("../css/fonts/websymbols-regular-webfont.eot");
+        
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype");
+        
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*ESTILOS GENERALES*/
 *{
     padding: 0px;
@@ -17,7 +37,6 @@
 body{
     background-image: url("../img/paven.png");
 }
-
 a{
     color:#529125;
     text-decoration: none;
@@ -25,23 +44,30 @@ a{
 a:visited{
     color:#529125;    
 }
-
 a:hover{
 color:#285616;
 }
-
 .red{
  color: #9b2422 !important;
 }
 .blue{
     color: #0c73f2 !important;
 }
-
-
-
+.orange{
+    color:#d69d2a !important;
+}
+.icon{
+    font-family: "icons";
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px
+}
+.clearfix{
+    float: none;
+    clear: both;    
+}
 
 /*FORMULARIOS*/
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -100,7 +126,6 @@ button:active{
     height: 250px;
     margin: 0px auto;
 }
-
 #header a{
     text-decoration: none;
     text-transform:uppercase;
@@ -112,13 +137,11 @@ button:active{
 #header h1:hover{
     text-shadow: 0px 2px 1px #333333, 0px 0px 4px #70b231; 
 }
-
 #header #logotipo{
     width: 770px;
     margin: 0px auto;
     padding-top: 20px;
 }
-
 #header #logotipo img{
     display: block;
     text-align: center;
@@ -132,13 +155,11 @@ button:active{
     color: #70b231; 
     font-family:"nevis";
 }
-
 #header h1 a{    
     color: #70b231;  
 }
 
 /*BARRA DE NAVEGACIÓN*/
-
 #nav{
     width: 100%;
     height: 40px;
@@ -182,7 +203,7 @@ border-left: 1px solid grey;/*línea de saparación a la izquierda*/
     position: absolute;    
     width: 160px;
     box-shadow: 0px 2px 2px grey
-    z-index: 1;/*se superpone de los otros elementos*/    
+    z-index: 1px;/*se superpone de los otros elementos*/    
 }
 
 #nav > ul > li:hover > ul{
@@ -209,11 +230,12 @@ border-left: 1px solid grey;/*línea de saparación a la izquierda*/
     width: 1250px;
     min-height: 1100px;
     margin:0px auto;
+    font-family: sans-serif,Arial,Helvetica;
 }
 
 /*BARRA LATERAL*/
 #aside, #frase {
-    clear: both;/*para que no se colo al lado del otro*/
+    /*clear: both;/*para que no se colo al lado del otro*/
     width: 200px; 
     float: left;
     margin: 30px;
@@ -223,6 +245,7 @@ border-left: 1px solid grey;/*línea de saparación a la izquierda*/
     font-family: sans-serif;
 }
 #frase {
+    /*clear: both;*/
     width: 180px;
     padding: 10px;
     font-size: 14px;
@@ -286,4 +309,76 @@ border-left: 1px solid grey;/*línea de saparación a la izquierda*/
 #aside label{
     margin: 0px auto;
     text-align: center;
+}
+
+/*SECCIONES*/
+
+#sections{
+    float: right;
+    width: 75%;
+    font-family: sans-serif,Arial,Helvetica;
+    margin-right: 20px;
+}
+
+#sections .titulo{
+    font-family:"fajala";
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top:-20px;
+    padding-top: 20px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sections section{
+    margin-top:40px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    color: #333333;
+    font-size: 16px;
+    overflow: hidden;/*lo que salga se la sección se oculta*/
+}
+
+#sections .article{
+    margin: 10px;
+    margin-top:20px;
+    padding-bottom:20px;
+}
+#sections .date{
+    color: grey;
+    font-size: 14px;
+}
+#sections .stiker1,
+#sections .stiker2{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 0;
+}
+#sections .stiker2{
+    margin-left: 61%;
+}
+#history{
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;   
+}
+
+/*PIE DE PÁGINA*/
+#footer{
+    width:100%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color:#333333;
+    padding-top:10px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px grey;
+
 }
